@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-pizza/static/css/main.cfc6446e.css",
+    "main.js": "/react-pizza/static/js/main.885776db.js",
+    "static/js/787.44c24075.chunk.js": "/react-pizza/static/js/787.44c24075.chunk.js",
+    "static/media/shopping-cart-colour 1.svg": "/react-pizza/static/media/shopping-cart-colour 1.49e3eb7618f9e300dd43.svg",
+    "static/media/cart.svg": "/react-pizza/static/media/cart.d05720f2b474db214523.svg",
+    "index.html": "/react-pizza/index.html",
+    "main.cfc6446e.css.map": "/react-pizza/static/css/main.cfc6446e.css.map",
+    "main.885776db.js.map": "/react-pizza/static/js/main.885776db.js.map",
+    "787.44c24075.chunk.js.map": "/react-pizza/static/js/787.44c24075.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cfc6446e.css",
+    "static/js/main.885776db.js"
+  ]
+}
