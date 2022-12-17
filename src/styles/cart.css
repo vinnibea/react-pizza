@@ -1,0 +1,239 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  box-sizing: border-box;
+  padding: 0 300px;
+}
+
+.cart_item {
+  display: flex;
+  justify-items: space-between;
+  align-items: center;
+  padding: 30px 0;
+  align-content: center;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.cart_empty {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 80px;
+  padding: 0 400px;
+  text-align: center;
+}
+
+.cart_empty-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+  margin-bottom: 10px;
+
+  letter-spacing: 0.01em;
+
+  color: #000000;
+}
+
+.cart_empty-subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 145.4%;
+  /* or 26px */
+
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  color: #777777;
+}
+
+.cart_empty-img {
+  background-image: url("../images/cart/shopping-cart-colour\ 1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+}
+
+.cart_empty-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 28px 14px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.015em;
+
+  color: #ffffff;
+  background: #282828;
+  border-radius: 30px;
+  transition: 0.3s all ease;
+}
+
+.cart_empty-button:hover {
+  background: #2828285d;
+  color: #000000;
+}
+
+.cart_item-left {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 300px;
+}
+
+.cart_img {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+.cart_title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+
+  color: #000000;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+
+  color: #8d8d8d;
+}
+
+.cart_item-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 70px;
+  gap: 12px;
+}
+
+.cart_control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fe5f1e;
+  font-size: 26px;
+  font-weight: 700;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fe5f1e;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cart_control--delete {
+  color: #d0d0d0;
+  border-color: #d0d0d0;
+  margin-left: 100px;
+}
+
+.cart_control:hover {
+  border: 2px solid #fe5d1e82;
+  color: #fe5d1e82;
+}
+
+.cart_pizza-q {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+
+  color: #000000;
+}
+.cart_item-right {
+  display: flex;
+}
+.cart_pizza-price {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+
+  color: #000000;
+  margin-left: 100px;
+}
+
+.cart_bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+
+  color: #000000;
+}
+
+.cart_bottom-q {
+  display: inline;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.cart_bottom-price {
+  display: inline;
+  font-weight: 700;
+  color: #fe5f1e;
+}
+
+.cart_buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.cart_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 60px;
+  border: 1px solid #000000;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.cart_button--back {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+  color: #cacaca;
+}
+
+.cart_button--checkout {
+  background-color: #fe5f1e;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+}

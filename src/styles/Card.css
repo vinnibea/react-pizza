@@ -1,0 +1,141 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card_img {
+  display: block;
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card_title {
+  font-weight: 800px;
+}
+
+.card_settings {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  margin-top: 20px;
+  justify-content: center;
+
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+
+.card_dough {
+  width: calc(50% - 40px);
+  display: inline-block;
+  padding: 8px 20px 14px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2c2c2c;
+  text-align: center;
+  border: none;
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+
+.card_sizes {
+  width: calc(33% - 39px);
+  display: inline-block;
+  padding: 8px 20px 14px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2c2c2c;
+  text-align: center;
+  border: none;
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+
+.card_sizes--active {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.disabled {
+  color: rgba(44, 44, 44, 0.146);
+  pointer-events: none;
+}
+
+.small-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card_bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+  margin-top: 16px;
+}
+
+.card_price {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+
+  letter-spacing: 0.015em;
+}
+
+.card_add {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #eb5a1e;
+  border: 1px solid #eb5a1e;
+  border-radius: 30px;
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+
+.card_add:hover {
+  background: #fe5f1e;
+  border: 1px solid #fe5f1e;
+  color: #fff;
+}
+
+.card_span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: inherit;
+    color: #fff;
+    transition: 0.3s all ease;
+    opacity: 0;
+  }
+
+  .card_span--active {
+    opacity: 1;
+    background-color: #fe5f1e;
+  }
+
+  .card_add:hover .card_span--active {
+    background-color: white;
+    color: #fe5f1e;
+  }
