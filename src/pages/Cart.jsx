@@ -4,27 +4,49 @@ import { Link } from "react-router-dom";
 import { CartItem } from "../components/CartItem";
 import { Empty } from "../components/Empty";
 import { Header } from "../components/Header";
+import { emptyCartAction } from "../redux/store";
 import "../styles/cart.css";
 
 export const Cart = () => {
-  const dispatch = useDispatch();
   const cart = useSelector(({ cartReducer }) => cartReducer);
+  const dispatch = useDispatch();
 
   const currentCartItems = Object.keys(cart.items).map((id) => cart.items[id]);
-  console.log();
+  const handleEmptyCart = () => {
+    dispatch(emptyCartAction());
+  };
+
+  // console.log(currentCartItems[0].items.length)
+
   return (
     <>
       <Header />
 
-      {currentCartItems.length ? (
-        <div className="cart">
+      {cart.totalPizzasLength ? (
+        <div className="cart cart--full">
           <div className="cart_header">
-            <div className="cart_cart"></div>
-            <div className="cart_delete"></div>
+            <div className="cart_cart">
+            <span className="cart_icon"></span>
+            <h3 className="cart_header-title">Корзина</h3>
+            </div>
+            <div className="cart_delete-section">
+               
+            <div
+              className="cart_delete"
+              onClick={() => handleEmptyCart()}
+            >
+            </div>
+            <p>Очистить корзину</p>
+            </div>
           </div>
-          {currentCartItems.map((pizza) => (
-            <CartItem {...pizza} key={pizza.items[0].imageUrl}></CartItem>
-          ))}
+          {currentCartItems.map((pizza) => {
+            if (pizza.items[0]) {
+              return (
+                <CartItem {...pizza} key={pizza.items[0].imageUrl}></CartItem>
+              );
+            }
+            return "";
+          })}
 
           <div className="cart_bottom">
             <p>

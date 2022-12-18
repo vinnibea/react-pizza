@@ -1,17 +1,47 @@
-.cart {
+.cart--full {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  justify-content: space-between;
   box-sizing: border-box;
-  padding: 0 300px;
+  padding: 0 280px;
+}
+.cart_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding-top: 100px;
 }
 
+.cart_header-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+}
+
+.cart_cart {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart_icon {
+  background-image: url('../images/icons/cart-black.svg');
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  object-fit: contain;
+}
 .cart_item {
   display: flex;
   justify-items: space-between;
   align-items: center;
+  margin: auto;
   padding: 30px 0;
-  align-content: center;
+
   border-bottom: 1px solid #f4f4f4;
 }
 
@@ -117,39 +147,58 @@ h5 {
 
   color: #8d8d8d;
 }
+.cart_delete-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color:  #B6B6B6;
+}
+.cart_delete {
+  background-image: url("../images/icons/tresh.svg");
+  width: 14px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 
 .cart_item-buttons {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
+  /* gap: 50px; */
   margin-left: 70px;
   gap: 12px;
 }
 
 .cart_control {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: #fe5f1e;
-  font-size: 26px;
-  font-weight: 700;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #fe5f1e;
-  border-radius: 50%;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
+  transition: 0.3s all ease-in;
+  border: none;
+  outline: none;
 }
 
-.cart_control--delete {
-  color: #d0d0d0;
-  border-color: #d0d0d0;
-  margin-left: 100px;
+.cart_control--minus {
+  background-image: url("../images/icons/minus.svg");
+}
+
+.cart_control--plus {
+  background-image: url("../images/icons/plus.svg");
+}
+
+.cart_control--cross {
+  margin-left: 75px;
+  background-image: url("../images/icons/cross.svg");
 }
 
 .cart_control:hover {
-  border: 2px solid #fe5d1e82;
-  color: #fe5d1e82;
+  opacity: 0.3;
 }
 
 .cart_pizza-q {
