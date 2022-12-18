@@ -1,17 +1,22 @@
 {
   "files": {
-    "main.css": "/react-pizza/static/css/main.cfc6446e.css",
-    "main.js": "/react-pizza/static/js/main.9c9347ad.js",
+    "main.css": "/react-pizza/static/css/main.3eaa492a.css",
+    "main.js": "/react-pizza/static/js/main.1f629acb.js",
     "static/js/787.44c24075.chunk.js": "/react-pizza/static/js/787.44c24075.chunk.js",
     "static/media/shopping-cart-colour 1.svg": "/react-pizza/static/media/shopping-cart-colour 1.49e3eb7618f9e300dd43.svg",
+    "static/media/cart-black.svg": "/react-pizza/static/media/cart-black.dcd5168086a25b3307ba.svg",
     "static/media/cart.svg": "/react-pizza/static/media/cart.d05720f2b474db214523.svg",
+    "static/media/tresh.svg": "/react-pizza/static/media/tresh.ceafcffb34cece0b1462.svg",
+    "static/media/cross.svg": "/react-pizza/static/media/cross.2d1f53ca5f3e1ba35446.svg",
+    "static/media/plus.svg": "/react-pizza/static/media/plus.deedb499d2be6beb9d7f.svg",
     "index.html": "/react-pizza/index.html",
-    "main.cfc6446e.css.map": "/react-pizza/static/css/main.cfc6446e.css.map",
-    "main.9c9347ad.js.map": "/react-pizza/static/js/main.9c9347ad.js.map",
+    "static/media/minus.svg": "/react-pizza/static/media/minus.6c093cd41848df4aa347.svg",
+    "main.3eaa492a.css.map": "/react-pizza/static/css/main.3eaa492a.css.map",
+    "main.1f629acb.js.map": "/react-pizza/static/js/main.1f629acb.js.map",
     "787.44c24075.chunk.js.map": "/react-pizza/static/js/787.44c24075.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cfc6446e.css",
-    "static/js/main.9c9347ad.js"
+    "static/css/main.3eaa492a.css",
+    "static/js/main.1f629acb.js"
   ]
 }
