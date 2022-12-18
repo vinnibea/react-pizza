@@ -8,8 +8,6 @@ import {
 
 export const CartItem = (pizza) => {
   const dispatch = useDispatch();
-  console.log(pizza.pizzasCount);
-  console.log(pizza.items);
 
   const handleAdd = (pizza) => {
     dispatch(addCartAction(pizza));

@@ -267,6 +267,7 @@ h5 {
   border: 1px solid #000000;
   border-radius: 30px;
   cursor: pointer;
+  transition: 0.3s all ease;
 }
 
 .cart_button--back {
@@ -277,12 +278,25 @@ h5 {
   background: #ffffff;
   border: 1px solid #d3d3d3;
   color: #cacaca;
+  
 }
+
+.cart_button--back:hover {
+  background-color: #282828;
+}
+
+
 
 .cart_button--checkout {
   background-color: #fe5f1e;
   color: #fff;
   font-weight: 700;
   text-align: center;
-  border: none;
+  border: 1px solid transparent;
+}
+
+.cart_button--checkout:hover {
+  background: #FFFFFF;
+  border: 1px solid #EB5A1E;
+  color:  #EB5A1E;
 }

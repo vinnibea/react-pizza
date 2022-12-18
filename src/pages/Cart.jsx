@@ -13,10 +13,10 @@ export const Cart = () => {
 
   const currentCartItems = Object.keys(cart.items).map((id) => cart.items[id]);
   const handleEmptyCart = () => {
-    dispatch(emptyCartAction());
+    if (window.confirm("Delete all?")) {
+      dispatch(emptyCartAction());
+    }
   };
-
-  // console.log(currentCartItems[0].items.length)
 
   return (
     <>
@@ -26,17 +26,15 @@ export const Cart = () => {
         <div className="cart cart--full">
           <div className="cart_header">
             <div className="cart_cart">
-            <span className="cart_icon"></span>
-            <h3 className="cart_header-title">Корзина</h3>
+              <span className="cart_icon"></span>
+              <h3 className="cart_header-title">Корзина</h3>
             </div>
             <div className="cart_delete-section">
-               
-            <div
-              className="cart_delete"
-              onClick={() => handleEmptyCart()}
-            >
-            </div>
-            <p>Очистить корзину</p>
+              <div
+                className="cart_delete"
+                onClick={() => handleEmptyCart()}
+              ></div>
+              <p>Очистить корзину</p>
             </div>
           </div>
           {currentCartItems.map((pizza) => {
