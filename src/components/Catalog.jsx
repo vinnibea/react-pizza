@@ -12,7 +12,7 @@ export const Catalog = () => {
   const categories = useSelector(({ filterReducer }) => filterReducer.category);
   const filter = useSelector(({ filterReducer }) => filterReducer.filter);
 
-
+ console.log(pizzas)
   useEffect(() => {
     dispatch(fetchFromApi());
   }, []);

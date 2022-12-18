@@ -1,6 +1,7 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import thunk from "redux-thunk";
 import axios from "axios";
+import db from '../db.json';
 
 const initialState = {
     items: [],
@@ -190,9 +191,7 @@ export const fetchFromApi = (category, filter) => (dispatch) => {
         url += `&_sort=${filter}&_order=asc`;
     }
 
-    return axios.get(url).then(({ data }) => {
-        dispatch(setItemsAction(data));
-    });
+    return dispatch(setItemsAction(db.pizzas));
 };
 
 export const setFilterAction = (filterOptions) => ({
