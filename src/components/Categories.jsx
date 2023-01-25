@@ -21,7 +21,8 @@ export const Categories = ({ filtersNames }) => {
   const dispatch = useDispatch();
   const filterRef = useRef(null);
   let activeLabel = filtersNames.find((obj) => obj.type === filters).name;
- 
+ console.log(filters)
+
   const onClickCategory = useCallback((index) => {
     dispatch(setCategoryAction(index));
   }, []);
@@ -41,7 +42,9 @@ export const Categories = ({ filtersNames }) => {
   useEffect(() => {
     setShowFilters(false);
   }, [filters]);
+  
 
+ 
   return (
     <nav className="categories">
       <div className="categories_main">

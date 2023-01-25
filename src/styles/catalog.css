@@ -3,8 +3,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 36px;
-  padding: 0 30px;
+  column-gap: 120px;
+  row-gap: 40px;
+  padding: 0 40px;
+  margin: auto;
 }
 
 .catalog_header {

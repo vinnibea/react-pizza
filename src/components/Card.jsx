@@ -11,12 +11,27 @@ export const Card = ({ name, types, sizes, price, imageUrl, pizza }) => {
   const dough = ["тонкое", "традиционное"];
   const dispatch = useDispatch();
   const cartSelector = useSelector(({ cartReducer }) => cartReducer);
+  const local = useSelector(({local }) => local);
+
+  console.log(local)
 
   const addedPizzas =
     cartSelector.items[pizza.id] && cartSelector.items[pizza.id].pizzasCount;
 
+    const handleAddStore = (name, pizza) => {
+      localStorage.setItem(name, JSON.stringify(pizza))
+      dispatch({type: 'ADD', payload: {...localStorage}})
+    }
+
+    const handleDeleteStore = (name) => {
+      localStorage.removeItem(name)
+
+      dispatch({type: 'REMOVE', payload: {...localStorage}})
+    }
+
   return (
     <article className="card">
+      {Object.keys(local).map(l => local[l])}
       <img alt={name} className="card_img" src={imageUrl}></img>
       <h3 className="card_title">{name}</h3>
       <div className="card_settings">

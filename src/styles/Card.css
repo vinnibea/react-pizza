@@ -6,7 +6,7 @@
 
 .card_img {
   display: block;
-  height: 300px;
+  height: 250px;
   width: 300px;
   object-fit: contain;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 
 .card_settings {
   display: flex;
-  width: 100%;
+  width: 300px;
   flex-direction: column;
   gap: 5px;
   padding: 5px;

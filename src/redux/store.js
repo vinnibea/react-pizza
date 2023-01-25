@@ -9,6 +9,21 @@ const initialState = {
 const initialCart = {
     items: {},
 };
+export const local = (state = {}, action) => {
+     switch(action.type) {
+        case 'ADD': 
+        return {
+            ...action.payload
+        }
+
+        case 'REMOVE': 
+        return {
+            ...action.payload
+        }
+
+        default: return state;
+     }
+}
 
 export const cartAction = (pizza) => ({
     type: "ADD_TO_CART",
@@ -181,16 +196,17 @@ export const setCategoryAction = (cat) => ({
 });
 
 export const fetchFromApi = (category, filter) => (dispatch) => {
-    let url = "http://localhost:3000/pizzas?";
+    let url = "http://localhost:3001/pizzas?";
     if (category !== null) {
         url += `&category=${category}`;
     }
 
     if (filter) {
-        url += `&_sort=${filter}&_order=asc`;
+        url += `&sort=${filter}&order=asc`;
     }
 
     return axios.get(url).then(({ data }) => {
+        console.log(data)
         dispatch(setItemsAction(data));
     });
 };
@@ -232,6 +248,7 @@ const reducer = combineReducers({
     setReducer,
     filterReducer,
     cartReducer,
+    local,
 });
 
 const store = createStore(reducer, applyMiddleware(thunk));
