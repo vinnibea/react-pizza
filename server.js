@@ -9,11 +9,9 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'build')));
-console.log(path.join(__dirname, 'build'))
 
 app.get('/pizzas?', (req, res) => {
   const { category, sort } = req.query;
-  console.log(req.query)
   preparedDB = db.pizzas;
 
   if (category && category !== undefined) {
@@ -28,8 +26,7 @@ app.get('/pizzas?', (req, res) => {
   if (sort === 'name') {
     preparedDB = preparedDB.sort((a, b) => a.name.localeCompare(b.name));
   }
-  console.log(preparedDB)
-
+  
   res.send(preparedDB)
 })
 app.listen(PORT, () => {
